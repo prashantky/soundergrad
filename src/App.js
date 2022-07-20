@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Slides from "./component/Slides"
 function App() {
+  const data=[{
+    title:"Today's workout plan",
+    text:"we're gonna do 3 bascis exercise"
+  },
+  {
+    title:"Tomorrow workout plan",
+    text:"we're gonna do 5 bascis exercise"
+  }]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Slides slides={data}/>
     </div>
   );
 }
